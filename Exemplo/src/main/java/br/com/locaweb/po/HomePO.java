@@ -10,6 +10,11 @@ public class HomePO extends SeleniumEduardo {
 	}
 	
 	public void buscarArtistaBotao(String artista) {
+		for (int second = 0;; second++) {
+			if (second >= 30) fail("timeout");
+			try { if (selenium.isElementPresent("id=q")) break; } catch (Exception e) {}
+			try {Thread.sleep(1000);} catch (Exception e) {} 
+		}
 		selenium.type("id=q", artista);
 		selenium.click("id=submitbutton");
 	}
