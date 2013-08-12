@@ -1,8 +1,6 @@
 package br.com.locaweb.po;
 import br.com.locaweb.config.SeleniumEduardo;
 
-
-
 public class HomePO extends SeleniumEduardo {
 
 	public void abrirHomeDaRadio() {
